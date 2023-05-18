@@ -121,7 +121,6 @@ def check_build_status(build_sid):
         .services(service_sid) \
         .builds(build_sid) \
         .fetch()
-    print(build.status)
     return build.status
 
 
@@ -146,15 +145,34 @@ def create_deployment(build_sid):
     print(deployment.sid)
 
 
-quick_draw()
-host_asset()
-print('https://pictionary-9376-dev.twil.io/images/quickdraw.gif')
+# quick_draw()
+# host_asset()
+# print('https://pictionary-9376-dev.twil.io/images/quickdraw.gif')
+
+
+
+
+
+
+
+
+
+
 # asset_version_sid = create_asset_version()
 # build_sid = create_build(asset_version_sid)
 # create_deployment(build_sid)
 # create_deployment('ZBc9ee23df73696e087efb5cb1f5592f33')
 
 # host_asset()
+
+
+
+
+
+
+
+
+
 
 
 
