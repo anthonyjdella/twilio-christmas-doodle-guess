@@ -161,3 +161,4 @@ cython_debug/
 
 .vscode/
 pictionary/.quickdrawcache/
+pictionary/flask_session/
