@@ -160,5 +160,5 @@ cython_debug/
 #.idea/
 
 .vscode/
-pictionary/.quickdrawcache/
-pictionary/flask_session/
+game/.quickdrawcache/
+game/flask_session/

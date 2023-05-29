@@ -79,7 +79,7 @@ def handle_good_guess():
     initialize_game()
 
 
-@app.route("/pictionary", methods=['POST'])
+@app.route("/game", methods=['POST'])
 def receive_inbound_text():
     user_input = request.values.get('Body', None).lower()
 
