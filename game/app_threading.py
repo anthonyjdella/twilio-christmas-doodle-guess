@@ -2,20 +2,18 @@ from quick_draw import send_outbound_text
 from quick_draw import quick_draw
 from quick_draw import host_asset
 
+import threading
 from flask import Flask, request, session
 from flask_session import Session
-from flask_cors import CORS, cross_origin
 from time import sleep
-import threading
 
 
 app = Flask(__name__)
 app.secret_key = 'super_secret_key'
 app.config['SESSION_TYPE'] = 'filesystem'
 
-asset_url = 'https://pictionary-9376-dev.twil.io/images/quickdraw.gif'
+asset_url = "https://pictionary-9376-dev.twil.io/images/quickdraw.gif"
 drawing_name = None
-
 is_playing = False
 
 Session(app)

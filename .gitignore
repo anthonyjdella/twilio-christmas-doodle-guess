@@ -162,3 +162,4 @@ cython_debug/
 .vscode/
 game/.quickdrawcache/
 game/flask_session/
+flask_session/

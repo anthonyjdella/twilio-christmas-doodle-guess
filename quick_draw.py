@@ -51,11 +51,11 @@ categories = [
 ]
 
 
-def send_outbound_text(body=None, media_URL=None):
+def send_outbound_text(to=None, body=None, media_URL=None):
     try:
         message = client.messages.create(
             from_=os.getenv('MY_TWILIO_NUMBER'),
-            to=os.getenv('ANTHONYS_NUMBER'),
+            to=to,
             body=body,
             media_url=media_URL
         )
@@ -71,6 +71,20 @@ def quick_draw():
         drawing = qd.get_drawing(random.choice(categories))
         drawing.animation.save('../images/quickdraw.gif')
         return drawing.name
+    except Exception as e:
+        print(e)
+
+
+def quick_draw_50_images():
+    try:
+        qd = QuickDrawData()
+        counter = 0
+        drawing_names = []
+        for i in range(1,51):
+            drawing = qd.get_drawing(random.choice(categories))
+            drawing.animation.save(f"../images/{i}-{drawing.name}.gif")
+            drawing_names.append(drawing.name)
+            counter += 0
     except Exception as e:
         print(e)
 
