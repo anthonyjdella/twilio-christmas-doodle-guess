@@ -69,7 +69,7 @@ def quick_draw():
     try:
         qd = QuickDrawData()
         drawing = qd.get_drawing(random.choice(categories))
-        drawing.animation.save('../images/quickdraw.gif')
+        drawing.animation.save('../gifs/quickdraw.gif')
         return drawing.name
     except Exception as e:
         print(e)
@@ -82,7 +82,7 @@ def quick_draw_50_images():
         drawing_names = []
         for i in range(1,51):
             drawing = qd.get_drawing(random.choice(categories))
-            drawing.animation.save(f"../images/{i}-{drawing.name}.gif")
+            drawing.animation.save(f"../gifs/{i}-{drawing.name}.gif")
             drawing_names.append(drawing.name)
             counter += 0
     except Exception as e:
@@ -99,16 +99,16 @@ def create_asset_version():
     service_url = f'https://serverless-upload.twilio.com/v1/Services/{service_sid}'
     upload_url = f'{service_url}/Assets/{asset_sid}/Versions'
 
-    file_contents = open('../images/quickdraw.gif', 'rb')
+    file_contents = open('../gifs/quickdraw.gif', 'rb')
 
     response = requests.post(
         upload_url,
         auth=(account_sid, auth_token),
         files={
-            'Content': ('../images/quickdraw.gif', file_contents, 'image/gif')
+            'Content': ('../gifs/quickdraw.gif', file_contents, 'image/gif')
         },
         data={
-            'Path': '/images/quickdraw.gif',
+            'Path': '/gifs/quickdraw.gif',
             'Visibility': 'public',
         },
     )
