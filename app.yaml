@@ -10,5 +10,5 @@ vpc_access_connector:
     name: projects/xmas-game-388208/locations/us-west1/connectors/xmas-game-connector
 
 env_variables:
-    REDISHOST: '10.81.58.85'
+    REDISHOST: '10.132.99.99'
     REDISPORT: '6379'
