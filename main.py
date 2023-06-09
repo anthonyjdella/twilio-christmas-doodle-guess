@@ -11,7 +11,7 @@ from redis import Redis
 app = Flask(__name__)
 app.secret_key = 'super_secret_key'
 app.config['SESSION_TYPE'] = 'redis'
-app.config['SESSION_REDIS'] = Redis(host='10.81.58.85', port='6379')
+app.config['SESSION_REDIS'] = Redis(host='10.132.99.99', port='6379')
 
 asset_urls = [
     "https://xmas-5474.twil.io/46-telephone.gif",
